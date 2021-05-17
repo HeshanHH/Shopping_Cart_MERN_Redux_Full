@@ -4,7 +4,10 @@
   "description": "Backend for the ecommers app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ecommers-back-end/src/server.js",
+    "server": "nodemon ecommers-back-end/src/server.js",
+    "client": "npm start --prefix ecommers-front-end",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [
     "mern",
@@ -13,9 +16,13 @@
   "author": "Heshan Wijerathna",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^6.1.0",
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
     "express-validator": "^6.11.1",
     "mongoose": "^5.12.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
