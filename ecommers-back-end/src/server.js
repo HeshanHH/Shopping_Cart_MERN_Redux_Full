@@ -1,6 +1,13 @@
+const bodyParser = require('body-parser');
 const express = require('express');
 require('dotenv').config(); // import .env
 const app = express();
+const connectDB = require('./config/databse');
+
+// database connection.
+connectDB();
+// can be use bodyparser also here.
+app.use(express.json());
 
 // GET test
 // http://localhost:PORT/
@@ -10,7 +17,7 @@ app.get('/getreq', (req, res, next) => {
   });
 });
 
-// POST
+// POST test
 // http://localhost:PORT/
 app.post('/postreq', (req, res, next) => {
   res.status(200).json({
