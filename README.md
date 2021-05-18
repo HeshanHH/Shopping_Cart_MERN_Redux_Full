@@ -15,3 +15,7 @@
 # bcrypt
 
 - https://www.npmjs.com/package/bcrypt
+
+# jsonwebtoken
+
+- https://www.npmjs.com/package/jsonwebtoken

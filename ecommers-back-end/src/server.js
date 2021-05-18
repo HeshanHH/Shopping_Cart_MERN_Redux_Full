@@ -5,14 +5,14 @@ const app = express();
 const connectDB = require('./config/databse');
 
 // Routes
-const userRoutes = require('./routes/user');
+const authRoutes = require('./routes/auth');
 
 // database connection.
 connectDB();
 // can be use bodyparser also here.
 app.use(express.json());
 
-app.use('/api', userRoutes);
+app.use('/api', authRoutes);
 
 // GET test
 // http://localhost:PORT/
