@@ -6,6 +6,7 @@ const connectDB = require('./config/databse');
 
 // Routes
 const authRoutes = require('./routes/auth');
+const adminRoutes = require('./routes/admin/auth');
 
 // database connection.
 connectDB();
@@ -13,6 +14,7 @@ connectDB();
 app.use(express.json());
 
 app.use('/api', authRoutes);
+app.use('/api', adminRoutes);
 
 // GET test
 // http://localhost:PORT/
