@@ -7,7 +7,10 @@
     "start": "nodemon ecommers-back-end/src/server.js",
     "server": "nodemon ecommers-back-end/src/server.js",
     "client": "npm start --prefix ecommers-front-end",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "admin": "npm start --prefix ecommers-admin-panel",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "devadmin": "concurrently \"npm run server\" \"npm run admin\"",
+    "dev-a-c": "concurrently \"npm run server\" \"npm run admin\" \"npm run client\""
   },
   "keywords": [
     "mern",
