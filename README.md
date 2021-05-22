@@ -19,3 +19,8 @@
 # jsonwebtoken
 
 - https://www.npmjs.com/package/jsonwebtoken
+
+# express-validator
+
+- https://express-validator.github.io/docs/
+- https://express-validator.github.io/docs/custom-error-messages.html

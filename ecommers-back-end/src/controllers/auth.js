@@ -1,6 +1,7 @@
+require('dotenv').config();
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
-require('dotenv').config();
+// const { validationResult } = require('express-validator');
 
 // http://localhost:5001/api/signup
 // {
@@ -11,6 +12,10 @@ require('dotenv').config();
 // }
 
 exports.signup = (req, res) => {
+  // get validtion result that pass from auth rout signip function then move it to array
+  // const error = validationResult(req);
+  // return res.status(400).json({ errors: error.array() });
+
   var filter = {
     email: req.body.email,
   };
