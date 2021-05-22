@@ -1,7 +1,8 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 import Header from '../Header/Header';
 
-const layout = (props) => {
+const Layout = (props) => {
   return (
     <>
       <Header />
@@ -10,4 +11,4 @@ const layout = (props) => {
   );
 };
 
-export default layout;
+export default Layout;
