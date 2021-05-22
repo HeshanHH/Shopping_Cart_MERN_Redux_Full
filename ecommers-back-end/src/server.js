@@ -7,7 +7,7 @@ const connectDB = require('./config/databse');
 // Routes
 const authRoutes = require('./routes/auth');
 const adminRoutes = require('./routes/admin/auth');
-
+const categoryRoutes = require('./routes/category');
 // database connection.
 connectDB();
 // can be use bodyparser also here.
@@ -15,6 +15,7 @@ app.use(express.json());
 
 app.use('/api', authRoutes);
 app.use('/api', adminRoutes);
+app.use('/api', categoryRoutes);
 
 // GET test
 // http://localhost:PORT/
